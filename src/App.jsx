@@ -54,7 +54,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🇩🇪 Német Igék Memorizálása</h1>
+      <h1>🇩🇪 Német Igék Memorizálása 🚀</h1>
 
       <div className="stats">
         <p>Helyes válaszok: {score.correct} / {score.total}</p>
