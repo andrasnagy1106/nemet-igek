@@ -170,6 +170,53 @@ button:disabled {
   color: #f87171;
 }
 
+.verb-details {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(100, 108, 255, 0.1);
+  border: 2px solid #646cff;
+  border-radius: 12px;
+  animation: fadeIn 0.3s;
+}
+
+.verb-details h3 {
+  margin: 0 0 1rem 0;
+  color: #646cff;
+  font-size: 1.1rem;
+}
+
+.verb-forms {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.verb-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.verb-form:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-label {
+  font-weight: bold;
+  color: #888;
+  font-size: 0.9rem;
+  min-width: 100px;
+}
+
+.form-value {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
 .next-btn {
   margin-top: 1rem;
   background: #22c55e;

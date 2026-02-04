@@ -120,6 +120,30 @@ function App() {
             </div>
           )}
 
+          {feedback && currentVerb && (
+            <div className="verb-details">
+              <h3>📚 Összes alak:</h3>
+              <div className="verb-forms">
+                <div className="verb-form">
+                  <span className="form-label">Magyar:</span>
+                  <span className="form-value">{currentVerb.hungarian}</span>
+                </div>
+                <div className="verb-form">
+                  <span className="form-label">Infinitiv:</span>
+                  <span className="form-value">{currentVerb.infinitiv}</span>
+                </div>
+                <div className="verb-form">
+                  <span className="form-label">Präteritum:</span>
+                  <span className="form-value">{currentVerb.prateritum}</span>
+                </div>
+                <div className="verb-form">
+                  <span className="form-label">Perfekt:</span>
+                  <span className="form-value">{currentVerb.perfekt}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
           {feedback && (
             <button className="next-btn" onClick={loadNewVerb}>
               Következő ige →
