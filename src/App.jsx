@@ -121,32 +121,33 @@ function App() {
 
       {mode === 'practice' && (
         <div className="settings">
-        <div className="setting-group">
-          <label>Mit mutatok?</label>
-          <select 
-            value={questionType} 
-            onChange={(e) => setQuestionType(e.target.value)}
-          >
-            <option value="hungarian">Magyar jelentés</option>
-            <option value="infinitiv">1. alak (Infinitiv)</option>
-            <option value="prateritum">2. alak (Präteritum)</option>
-            <option value="perfekt">3. alak (Perfekt)</option>
-          </select>
-        </div>
+          <div className="setting-group">
+            <label>Mit mutatok?</label>
+            <select 
+              value={questionType} 
+              onChange={(e) => setQuestionType(e.target.value)}
+            >
+              <option value="hungarian">Magyar jelentés</option>
+              <option value="infinitiv">1. alak (Infinitiv)</option>
+              <option value="prateritum">2. alak (Präteritum)</option>
+              <option value="perfekt">3. alak (Perfekt)</option>
+            </select>
+          </div>
 
-        <div className="setting-group">
-          <label>Mit kérdezek?</label>
-          <select 
-            value={answerType} 
-            onChange={(e) => setAnswerType(e.target.value)}
-          >
-            <option value="hungarian">Magyar jelentés</option>
-            <option value="infinitiv">1. alak (Infinitiv)</option>
-            <option value="prateritum">2. alak (Präteritum)</option>
-            <option value="perfekt">3. alak (Perfekt)</option>
-          </select>
+          <div className="setting-group">
+            <label>Mit kérdezek?</label>
+            <select 
+              value={answerType} 
+              onChange={(e) => setAnswerType(e.target.value)}
+            >
+              <option value="hungarian">Magyar jelentés</option>
+              <option value="infinitiv">1. alak (Infinitiv)</option>
+              <option value="prateritum">2. alak (Präteritum)</option>
+              <option value="perfekt">3. alak (Perfekt)</option>
+            </select>
+          </div>
         </div>
-      </div>
+      )}
 
       {mode === 'study' && currentVerb && (
         <div className="card study-card">
