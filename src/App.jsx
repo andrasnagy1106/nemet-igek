@@ -17,6 +17,40 @@ function App() {
     perfekt: '3. alak (Perfekt)'
   }
 
+  // Levenshtein distance - karakterek közötti különbség számítása
+  const getEditDistance = (str1, str2) => {
+    const s1 = str1.toLowerCase().trim()
+    const s2 = str2.toLowerCase().trim()
+    const len1 = s1.length
+    const len2 = s2.length
+    const matrix = []
+
+    if (len1 === 0) return len2
+    if (len2 === 0) return len1
+
+    for (let i = 0; i <= len2; i++) {
+      matrix[i] = [i]
+    }
+    for (let j = 0; j <= len1; j++) {
+      matrix[0][j] = j
+    }
+
+    for (let i = 1; i <= len2; i++) {
+      for (let j = 1; j <= len1; j++) {
+        if (s2.charAt(i - 1) === s1.charAt(j - 1)) {
+          matrix[i][j] = matrix[i - 1][j - 1]
+        } else {
+          matrix[i][j] = Math.min(
+            matrix[i - 1][j - 1] + 1,
+            matrix[i][j - 1] + 1,
+            matrix[i - 1][j] + 1
+          )
+        }
+      }
+    }
+    return matrix[len2][len1]
+  }
+
   useEffect(() => {
     loadNewVerb()
   }, [questionType, answerType])
@@ -33,13 +67,17 @@ function App() {
 
     const correctAnswer = currentVerb[answerType].toLowerCase().trim()
     const userAnswerNormalized = userAnswer.toLowerCase().trim()
+    const distance = getEditDistance(userAnswerNormalized, correctAnswer)
+
+    // Tűréshatár: max 2 karakter eltérés rövid szavaknál (< 6 betű), különben max 2
+    const maxDistance = correctAnswer.length <= 5 ? 1 : 2
 
     if (userAnswerNormalized === correctAnswer) {
       setFeedback('✅ Helyes!')
       setScore({ correct: score.correct + 1, total: score.total + 1 })
-      setTimeout(() => {
-        loadNewVerb()
-      }, 1500)
+    } else if (distance <= maxDistance) {
+      setFeedback(`✅ Majdnem! (${userAnswer} → ${currentVerb[answerType]}) Elfogadom!`)
+      setScore({ correct: score.correct + 1, total: score.total + 1 })
     } else {
       setFeedback(`❌ Helytelen! A helyes válasz: ${currentVerb[answerType]}`)
       setScore({ ...score, total: score.total + 1 })
