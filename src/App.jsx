@@ -54,7 +54,19 @@ function App() {
 
   useEffect(() => {
     loadNewVerb()
+  }, [])
+
+  useEffect(() => {
+    if (mode === 'practice') {
+      loadNewVerb()
+    }
   }, [questionType, answerType])
+
+  const handleModeChange = (newMode) => {
+    setMode(newMode)
+    setFeedback('')
+    setUserAnswer('')
+  }
 
   const loadNewVerb = () => {
     const randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
@@ -98,13 +110,13 @@ function App() {
       <div className="mode-selector">
         <button 
           className={mode === 'practice' ? 'active' : ''}
-          onClick={() => setMode('practice')}
+          onClick={() => handleModeChange('practice')}
         >
           ✍️ Gyakorlás
         </button>
         <button 
           className={mode === 'study' ? 'active' : ''}
-          onClick={() => setMode('study')}
+          onClick={() => handleModeChange('study')}
         >
           📖 Tanulás
         </button>
