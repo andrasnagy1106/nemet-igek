@@ -3,6 +3,7 @@ import './App.css'
 import verbs from './data/verbs.json'
 
 function App() {
+  const [mode, setMode] = useState('practice') // 'practice' vagy 'study'
   const [questionType, setQuestionType] = useState('hungarian')
   const [answerType, setAnswerType] = useState('prateritum')
   const [currentVerb, setCurrentVerb] = useState(null)
@@ -94,14 +95,32 @@ function App() {
     <div className="app">
       <h1>🇩🇪 Német Igék Memorizálása 🚀</h1>
 
-      <div className="stats">
-        <p>Helyes válaszok: {score.correct} / {score.total}</p>
-        {score.total > 0 && (
-          <p>Pontosság: {Math.round((score.correct / score.total) * 100)}%</p>
-        )}
+      <div className="mode-selector">
+        <button 
+          className={mode === 'practice' ? 'active' : ''}
+          onClick={() => setMode('practice')}
+        >
+          ✍️ Gyakorlás
+        </button>
+        <button 
+          className={mode === 'study' ? 'active' : ''}
+          onClick={() => setMode('study')}
+        >
+          📖 Tanulás
+        </button>
       </div>
 
-      <div className="settings">
+      {mode === 'practice' && (
+        <div className="stats">
+          <p>Helyes válaszok: {score.correct} / {score.total}</p>
+          {score.total > 0 && (
+            <p>Pontosság: {Math.round((score.correct / score.total) * 100)}%</p>
+          )}
+        </div>
+      )}
+
+      {mode === 'practice' && (
+        <div className="settings">
         <div className="setting-group">
           <label>Mit mutatok?</label>
           <select 
@@ -129,7 +148,34 @@ function App() {
         </div>
       </div>
 
-      {currentVerb && questionType !== answerType && (
+      {mode === 'study' && currentVerb && (
+        <div className="card study-card">
+          <h2>📚 Tanulj belőle!</h2>
+          <div className="study-verb-details">
+            <div className="study-verb-form">
+              <span className="form-label">🇭🇺 Magyar:</span>
+              <span className="form-value">{currentVerb.hungarian}</span>
+            </div>
+            <div className="study-verb-form">
+              <span className="form-label">1️⃣ Infinitiv:</span>
+              <span className="form-value highlight">{currentVerb.infinitiv}</span>
+            </div>
+            <div className="study-verb-form">
+              <span className="form-label">2️⃣ Präteritum:</span>
+              <span className="form-value highlight">{currentVerb.prateritum}</span>
+            </div>
+            <div className="study-verb-form">
+              <span className="form-label">3️⃣ Perfekt:</span>
+              <span className="form-value highlight">{currentVerb.perfekt}</span>
+            </div>
+          </div>
+          <button className="next-btn" onClick={loadNewVerb}>
+            Következő ige →
+          </button>
+        </div>
+      )}
+
+      {mode === 'practice' && currentVerb && questionType !== answerType && (
         <div className="card">
           <div className="question">
             <h2>{typeLabels[questionType]}</h2>
@@ -190,7 +236,7 @@ function App() {
         </div>
       )}
 
-      {questionType === answerType && (
+      {mode === 'practice' && questionType === answerType && (
         <div className="error-message">
           ⚠️ A kérdés és a válasz típusa nem lehet ugyanaz!
         </div>
