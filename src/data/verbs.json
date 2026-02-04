@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "hungarian": "lenni",
+    "infinitiv": "sein",
+    "prateritum": "war",
+    "perfekt": "gewesen"
+  },
+  {
+    "id": 2,
+    "hungarian": "van/vannak",
+    "infinitiv": "haben",
+    "prateritum": "hatte",
+    "perfekt": "gehabt"
+  },
+  {
+    "id": 3,
+    "hungarian": "csinálni",
+    "infinitiv": "machen",
+    "prateritum": "machte",
+    "perfekt": "gemacht"
+  },
+  {
+    "id": 4,
+    "hungarian": "menni",
+    "infinitiv": "gehen",
+    "prateritum": "ging",
+    "perfekt": "gegangen"
+  },
+  {
+    "id": 5,
+    "hungarian": "jönni",
+    "infinitiv": "kommen",
+    "prateritum": "kam",
+    "perfekt": "gekommen"
+  },
+  {
+    "id": 6,
+    "hungarian": "mondani",
+    "infinitiv": "sagen",
+    "prateritum": "sagte",
+    "perfekt": "gesagt"
+  },
+  {
+    "id": 7,
+    "hungarian": "adni",
+    "infinitiv": "geben",
+    "prateritum": "gab",
+    "perfekt": "gegeben"
+  },
+  {
+    "id": 8,
+    "hungarian": "látni",
+    "infinitiv": "sehen",
+    "prateritum": "sah",
+    "perfekt": "gesehen"
+  },
+  {
+    "id": 9,
+    "hungarian": "találni, találkozni",
+    "infinitiv": "finden",
+    "prateritum": "fand",
+    "perfekt": "gefunden"
+  },
+  {
+    "id": 10,
+    "hungarian": "akarni",
+    "infinitiv": "wollen",
+    "prateritum": "wollte",
+    "perfekt": "gewollt"
+  },
+  {
+    "id": 11,
+    "hungarian": "tudni (tud vmit)",
+    "infinitiv": "wissen",
+    "prateritum": "wusste",
+    "perfekt": "gewusst"
+  },
+  {
+    "id": 12,
+    "hungarian": "venni",
+    "infinitiv": "nehmen",
+    "prateritum": "nahm",
+    "perfekt": "genommen"
+  },
+  {
+    "id": 13,
+    "hungarian": "beszélni",
+    "infinitiv": "sprechen",
+    "prateritum": "sprach",
+    "perfekt": "gesprochen"
+  },
+  {
+    "id": 14,
+    "hungarian": "megérteni",
+    "infinitiv": "verstehen",
+    "prateritum": "verstand",
+    "perfekt": "verstanden"
+  },
+  {
+    "id": 15,
+    "hungarian": "hozni",
+    "infinitiv": "bringen",
+    "prateritum": "brachte",
+    "perfekt": "gebracht"
+  },
+  {
+    "id": 16,
+    "hungarian": "írni",
+    "infinitiv": "schreiben",
+    "prateritum": "schrieb",
+    "perfekt": "geschrieben"
+  },
+  {
+    "id": 17,
+    "hungarian": "ülni",
+    "infinitiv": "sitzen",
+    "prateritum": "saß",
+    "perfekt": "gesessen"
+  },
+  {
+    "id": 18,
+    "hungarian": "állni",
+    "infinitiv": "stehen",
+    "prateritum": "stand",
+    "perfekt": "gestanden"
+  },
+  {
+    "id": 19,
+    "hungarian": "használni",
+    "infinitiv": "benutzen",
+    "prateritum": "benutzte",
+    "perfekt": "benutzt"
+  },
+  {
+    "id": 20,
+    "hungarian": "enni",
+    "infinitiv": "essen",
+    "prateritum": "aß",
+    "perfekt": "gegessen"
+  },
+  {
+    "id": 21,
+    "hungarian": "inni",
+    "infinitiv": "trinken",
+    "prateritum": "trank",
+    "perfekt": "getrunken"
+  },
+  {
+    "id": 22,
+    "hungarian": "futni",
+    "infinitiv": "laufen",
+    "prateritum": "lief",
+    "perfekt": "gelaufen"
+  },
+  {
+    "id": 23,
+    "hungarian": "vezetni (autót)",
+    "infinitiv": "fahren",
+    "prateritum": "fuhr",
+    "perfekt": "gefahren"
+  },
+  {
+    "id": 24,
+    "hungarian": "olvasni",
+    "infinitiv": "lesen",
+    "prateritum": "las",
+    "perfekt": "gelesen"
+  },
+  {
+    "id": 25,
+    "hungarian": "feküdni",
+    "infinitiv": "liegen",
+    "prateritum": "lag",
+    "perfekt": "gelegen"
+  },
+  {
+    "id": 26,
+    "hungarian": "hívni",
+    "infinitiv": "rufen",
+    "prateritum": "rief",
+    "perfekt": "gerufen"
+  },
+  {
+    "id": 27,
+    "hungarian": "maradni",
+    "infinitiv": "bleiben",
+    "prateritum": "blieb",
+    "perfekt": "geblieben"
+  },
+  {
+    "id": 28,
+    "hungarian": "mutatni",
+    "infinitiv": "zeigen",
+    "prateritum": "zeigte",
+    "perfekt": "gezeigt"
+  },
+  {
+    "id": 29,
+    "hungarian": "segíteni",
+    "infinitiv": "helfen",
+    "prateritum": "half",
+    "perfekt": "geholfen"
+  },
+  {
+    "id": 30,
+    "hungarian": "hallani",
+    "infinitiv": "hören",
+    "prateritum": "hörte",
+    "perfekt": "gehört"
+  },
+  {
+    "id": 31,
+    "hungarian": "kezdeni",
+    "infinitiv": "beginnen",
+    "prateritum": "begann",
+    "perfekt": "begonnen"
+  },
+  {
+    "id": 32,
+    "hungarian": "dolgozni",
+    "infinitiv": "arbeiten",
+    "prateritum": "arbeitete",
+    "perfekt": "gearbeitet"
+  },
+  {
+    "id": 33,
+    "hungarian": "játszani",
+    "infinitiv": "spielen",
+    "prateritum": "spielte",
+    "perfekt": "gespielt"
+  },
+  {
+    "id": 34,
+    "hungarian": "kérdezni",
+    "infinitiv": "fragen",
+    "prateritum": "fragte",
+    "perfekt": "gefragt"
+  },
+  {
+    "id": 35,
+    "hungarian": "tanulni",
+    "infinitiv": "lernen",
+    "prateritum": "lernte",
+    "perfekt": "gelernt"
+  },
+  {
+    "id": 36,
+    "hungarian": "gondolni",
+    "infinitiv": "denken",
+    "prateritum": "dachte",
+    "perfekt": "gedacht"
+  },
+  {
+    "id": 37,
+    "hungarian": "érezni",
+    "infinitiv": "fühlen",
+    "prateritum": "fühlte",
+    "perfekt": "gefühlt"
+  },
+  {
+    "id": 38,
+    "hungarian": "válni vmivé",
+    "infinitiv": "werden",
+    "prateritum": "wurde",
+    "perfekt": "geworden"
+  },
+  {
+    "id": 39,
+    "hungarian": "elengedni",
+    "infinitiv": "lassen",
+    "prateritum": "ließ",
+    "perfekt": "gelassen"
+  },
+  {
+    "id": 40,
+    "hungarian": "tudni (tud csinálni)",
+    "infinitiv": "können",
+    "prateritum": "konnte",
+    "perfekt": "gekonnt"
+  },
+  {
+    "id": 41,
+    "hungarian": "vinni",
+    "infinitiv": "tragen",
+    "prateritum": "trug",
+    "perfekt": "getragen"
+  },
+  {
+    "id": 42,
+    "hungarian": "várni",
+    "infinitiv": "warten",
+    "prateritum": "wartete",
+    "perfekt": "gewartet"
+  },
+  {
+    "id": 43,
+    "hungarian": "ismerni",
+    "infinitiv": "kennen",
+    "prateritum": "kannte",
+    "perfekt": "gekannt"
+  },
+  {
+    "id": 44,
+    "hungarian": "hívni (telefonon)",
+    "infinitiv": "anrufen",
+    "prateritum": "rief an",
+    "perfekt": "angerufen"
+  },
+  {
+    "id": 45,
+    "hungarian": "élni",
+    "infinitiv": "leben",
+    "prateritum": "lebte",
+    "perfekt": "gelebt"
+  },
+  {
+    "id": 46,
+    "hungarian": "kapni",
+    "infinitiv": "bekommen",
+    "prateritum": "bekam",
+    "perfekt": "bekommen"
+  },
+  {
+    "id": 47,
+    "hungarian": "csinálni, tenni",
+    "infinitiv": "tun",
+    "prateritum": "tat",
+    "perfekt": "getan"
+  },
+  {
+    "id": 48,
+    "hungarian": "kellett, szabad",
+    "infinitiv": "dürfen",
+    "prateritum": "durfte",
+    "perfekt": "gedurft"
+  },
+  {
+    "id": 49,
+    "hungarian": "kell, kellene",
+    "infinitiv": "sollen",
+    "prateritum": "sollte",
+    "perfekt": "gesollt"
+  },
+  {
+    "id": 50,
+    "hungarian": "szeretni (szeretne)",
+    "infinitiv": "mögen",
+    "prateritum": "mochte",
+    "perfekt": "gemocht"
+  }
+]
