@@ -105,7 +105,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🇩🇪 Német Igék Memorizálása 🚀</h1>
+      <h1>🥨 Német Igék Memorizálása 🚀</h1>
 
       <div className="mode-selector">
         <button 
