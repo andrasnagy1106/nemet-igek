@@ -71,6 +71,9 @@ function App() {
     if (newMode === 'practice') {
       setCurrentIndex(0)
       loadNewVerb(0)
+    } else if (newMode === 'study') {
+      setCurrentIndex(0)
+      loadNewVerb(0)
     }
   }
 
@@ -190,7 +193,7 @@ function App() {
               <span className="form-value highlight">{currentVerb.perfekt}</span>
             </div>
           </div>
-          <button className="next-btn" onClick={loadNewVerb}>
+          <button className="next-btn" onClick={() => loadNewVerb()}>
             Következő ige →
           </button>
         </div>
@@ -250,7 +253,7 @@ function App() {
           )}
 
           {feedback && (
-            <button className="next-btn" onClick={loadNewVerb}>
+            <button className="next-btn" onClick={() => loadNewVerb()}>
               Következő ige →
             </button>
           )}
