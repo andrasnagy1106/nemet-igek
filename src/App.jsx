@@ -15,7 +15,7 @@ function App() {
     hungarian: 'Magyar jelentés',
     infinitiv: '1. alak (Infinitiv)',
     prateritum: '2. alak (Präteritum)',
-    perfekt: '3. alak (Perfekt)'
+    perfekt: '3. alak (Perfekt - segédige + Partizip)'
   }
 
   // Levenshtein distance - karakterek közötti különbség számítása
