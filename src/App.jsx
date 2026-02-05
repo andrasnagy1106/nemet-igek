@@ -7,6 +7,7 @@ function App() {
   const [questionType, setQuestionType] = useState('hungarian')
   const [answerType, setAnswerType] = useState('prateritum')
   const [currentVerb, setCurrentVerb] = useState(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
   const [userAnswer, setUserAnswer] = useState('')
   const [feedback, setFeedback] = useState('')
   const [score, setScore] = useState({ correct: 0, total: 0 })
@@ -53,12 +54,13 @@ function App() {
   }
 
   useEffect(() => {
-    loadNewVerb()
+    loadNewVerb(0)
   }, [])
 
   useEffect(() => {
     if (mode === 'practice') {
-      loadNewVerb()
+      setCurrentIndex(0)
+      loadNewVerb(0)
     }
   }, [questionType, answerType])
 
@@ -66,11 +68,16 @@ function App() {
     setMode(newMode)
     setFeedback('')
     setUserAnswer('')
+    if (newMode === 'practice') {
+      setCurrentIndex(0)
+      loadNewVerb(0)
+    }
   }
 
-  const loadNewVerb = () => {
-    const randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
-    setCurrentVerb(randomVerb)
+  const loadNewVerb = (index = null) => {
+    const nextIndex = index !== null ? index : (currentIndex + 1) % verbs.length
+    setCurrentIndex(nextIndex)
+    setCurrentVerb(verbs[nextIndex])
     setUserAnswer('')
     setFeedback('')
   }
@@ -124,6 +131,7 @@ function App() {
 
       {mode === 'practice' && (
         <div className="stats">
+          <p>Ige: {currentIndex + 1} / {verbs.length}</p>
           <p>Helyes válaszok: {score.correct} / {score.total}</p>
           {score.total > 0 && (
             <p>Pontosság: {Math.round((score.correct / score.total) * 100)}%</p>
